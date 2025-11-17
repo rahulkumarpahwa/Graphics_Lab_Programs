@@ -1,10 +1,10 @@
 ## command to compile:
 
-gcc -o a.exe <filename>.c -L"C:/mingw/lib" -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -lstdc++
+```gcc -o a.exe <filename>.c -L"C:/mingw/lib" -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -lstdc++```
 
 ## run:
 
-./a.exe
+```./a.exe```
 
 ## List Of Programs:
 
