@@ -3,20 +3,33 @@
 #include <conio.h>
 #include <math.h>
 
-int compute_intersection(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, double *ix, double *iy)
+// Compute intersection of two lines AB and CD
+int compute_intersection(double x1, double y1, double x2, double y2,
+                         double x3, double y3, double x4, double y4,
+                         double *ix, double *iy)
 {
+    // Line AB: a1*x + b1*y = c1
     double a1 = y2 - y1;
     double b1 = x1 - x2;
     double c1 = a1 * x1 + b1 * y1;
+
+    // Line CD: a2*x + b2*y = c2
     double a2 = y4 - y3;
     double b2 = x3 - x4;
     double c2 = a2 * x3 + b2 * y3;
+
+    // Determinant (check if lines are parallel)
     double det = a1 * b2 - a2 * b1;
     if (fabs(det) < 1e-9)
-        return 0;
+    {
+        return 0; // No unique intersection
+    }
+
+    // Solve using Cramer's Rule
     *ix = (b2 * c1 - b1 * c2) / det;
     *iy = (a1 * c2 - a2 * c1) / det;
-    return 1;
+
+    return 1; // Intersection found
 }
 
 int main()
