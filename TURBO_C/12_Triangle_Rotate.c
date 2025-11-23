@@ -1,11 +1,13 @@
-#include <graphics.h>
+#include "graphics.h"
 #include <conio.h>
 #include <stdio.h>
 #include <math.h>
 
+#define PI 3.14159265358979323846
+
 void rotate_point(double xc, double yc, double x, double y, double angle_deg, double *rx, double *ry)
 {
-    double angle = angle_deg * M_PI / 180.0;
+    double angle = angle_deg * PI / 180.0;
     double s = sin(angle), c = cos(angle);
     double tx = x - xc;
     double ty = y - yc;
