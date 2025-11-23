@@ -2,10 +2,11 @@
 #include <conio.h>
 #include <stdio.h>
 #include <math.h>
+#define PI 3.14159265358979323846
 
 void rotate_point(int xc, int yc, int x, int y, double angle_deg, int *rx, int *ry)
 {
-    double angle = angle_deg * M_PI / 180.0;
+    double angle = angle_deg * PI / 180.0;
     double s = sin(angle), c = cos(angle);
     double tx = x - xc;
     double ty = y - yc;

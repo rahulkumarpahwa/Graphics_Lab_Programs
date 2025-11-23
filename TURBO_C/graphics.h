@@ -66,6 +66,11 @@ extern "C"
     void rectangle(int top, int left, int right, int bottom);
     void setfillstyle(int pattern, int color);
     void floodfill(int x, int y, int color);
+    void drawpoly(int num_points, int *polypoints);
+    void setbkcolor(int color);
+    void arc(int x, int y, int startangle, int endangle, int radius);
+    void bar(int top, int left, int right, int bottom);
+    void ellipse(int x, int y, int start_angle, int end_angle, int x_radius, int y_radius);
 
 #ifdef __cplusplus
 }
